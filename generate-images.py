@@ -26,7 +26,9 @@ class ImageSaver:
         method_path = Path(self.base_path, self.base_name, method_name)
         method_path.parent.mkdir(parents=True, exist_ok=True)
 
-        imageio.imwrite(str(method_path) + '_in.png', input)
+        # Uncomment to generate source images,
+        # then copy them to `images/source`.
+        # imageio.imwrite(str(method_path) + '_in.png', input)
         imageio.imwrite(str(method_path) + '_out.png', output)
 
         return self
