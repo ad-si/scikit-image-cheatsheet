@@ -304,3 +304,138 @@
         - name: rescale_intensity
           args:
             image: text_inverted
+
+- name: feature
+  children:
+    - name: ''
+      children:
+        # - name: blob_dog
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: blob_doh
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: blob_log
+        #   args:
+        #     image: text_inverted
+
+        - name: canny
+          args:
+            image: text_inverted
+
+        - name: corner_fast
+          args:
+            image: text_inverted
+
+        # - name: corner_foerstner
+        #   args:
+        #     image: text_inverted
+
+        - name: corner_harris
+          args:
+            image: text_inverted
+
+        - name: corner_kitchen_rosenfeld
+          args:
+            image: text_inverted
+
+        - name: corner_moravec
+          args:
+            image: text_inverted
+
+        # - name: corner_orientations
+        #   args:
+        #     image: text_inverted
+
+        # - name: corner_peaks
+        #   args:
+        #     image: text_inverted
+
+        - name: corner_shi_tomasi
+          args:
+            image: text_inverted
+
+        # - name: corner_subpix
+        #   args:
+        #     image: text_inverted
+
+        # - name: daisy
+        #   args:
+        #     image: text_inverted
+
+        # - name: draw_multiblock_lbp
+        #   args:
+        #     image: text_inverted
+
+        # - name: greycomatrix
+        #   args:
+        #     image: text_inverted
+
+        # - name: greycoprops
+        #   args:
+        #     image: text_inverted
+
+        # - name: hessian_matrix
+        #   args:
+        #     image: text_inverted
+
+        # - name: hessian_matrix_det
+        #   args:
+        #     image: text_inverted
+
+        # - name: hessian_matrix_eigvals
+        #   args:
+        #     image: text_inverted
+
+        # - name: hog
+        #   args:
+        #     image: text_inverted
+
+        - name: local_binary_pattern
+          args:
+            image: text_inverted
+            P: 5
+            R: 5
+
+        # - name: match_descriptors
+        #   args:
+        #     image: text_inverted
+
+        # - name: match_template
+        #   args:
+        #     image: text_inverted
+
+        # - name: multiblock_lbp
+        #   args:
+        #     int_image: text_inverted
+        #     r:
+        #     c:
+        #     width:
+        #     height:
+
+        - name: peak_local_max
+          args:
+            image: text_inverted
+            indices: false
+
+        # - name: plot_matches
+        #   args:
+        #     image: text_inverted
+
+        # - name: register_translation
+        #   args:
+        #     image: text_inverted
+
+        - name: shape_index
+          args:
+            image: text_inverted
+
+        # - name: structure_tensor
+        #   args:
+        #     image: text_inverted
+
+        # - name: structure_tensor_eigvals
+        #   args:
+        #     image: text_inverted
