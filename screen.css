@@ -17,20 +17,30 @@ main {
   padding: 2em 4em;
 }
 
+header {
+  margin-bottom: 2em;
+}
+
+header span {
+  display: inline-block;
+  color: lightskyblue;
+  font-weight: 100;
+}
+
 img#logo {
   display: inline-block;
-  width: 3em;
-  vertical-align: middle;
+  width: 4em;
   margin-right: 1em;
+  vertical-align: -50%;
 }
 
 h1 {
-  color: lightskyblue;
   display: inline-block;
   font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 100;
   font-size: 2.5em;
-  vertical-align: middle;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: inherit;
 }
 
 hr {
@@ -40,7 +50,7 @@ hr {
 }
 
 a, a:visited {
-  color: rgb(220, 220, 220);
+  color: inherit;
 }
 
 section a {
