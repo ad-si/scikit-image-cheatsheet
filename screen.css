@@ -48,6 +48,10 @@ h2, h3 {
   color: lightskyblue;
 }
 
+p {
+  line-height: 1.3;
+}
+
 hr {
   background-color: lightskyblue;
   border: 0;
