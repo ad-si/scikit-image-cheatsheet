@@ -31,10 +31,16 @@
 
   <hr>
 
-  <section>
-
   {% for category in site.data.categories %}
+    <section>
     <h2><code>{{category.name}}</code></h2>
+
+    {% if category.description %}
+      <div class="description">
+        <p>Use methods in the "{{category.name}}" module like this:</p>
+        {% highlight python %}{{category.description | strip}}{% endhighlight %}
+      </div>
+    {% endif %}
 
     {% for subcategory in category.children %}
       <h3><code>{{subcategory.name}}</code></h3>
@@ -56,11 +62,7 @@
             {{method.args | remove: '"' | remove: '>' | remove: '{' | remove: r_brace}}
           {% endcapture %}
 
-          {% capture image_arg %}
-            image={{method.image | default: 'text'}},
-          {% endcapture %}
-
-          {% assign full_args_str = args_str | prepend: ' ' | prepend: image_arg %}
+          {% assign full_args_str = args_str | prepend: ' ' %}
           {% assign full_args_joined = full_args_str | split: ' ' | join: indent %}
 
           {% capture code %}
@@ -68,7 +70,7 @@
           {% endcapture %}
 
           <li>
-            <a href="{{method_url | strip_newlines | remove: ' '}}">
+            <a href="{{method_url | strip_newlines | remove: ' ' | replace: '..', '.'}}">
               {% highlight python %}{{code | strip}}{% endhighlight %}
             </a>
             <img
@@ -81,7 +83,8 @@
         {% endfor %}
       </ul>
     {% endfor %}
+    </section>
+    <hr>
   {% endfor %}
 
-  </section>
 </main>

@@ -22,13 +22,12 @@ class ImageSaver:
         self.base_path = base_path
         return self
 
-    def save (self, source, func, args):
-        name = f'{self.base_name}/{func.__name__}'
-        method_path = Path(self.base_path, name)
+    def save (self, method_name, input, output):
+        method_path = Path(self.base_path, self.base_name, method_name)
         method_path.parent.mkdir(parents=True, exist_ok=True)
 
-        imageio.imwrite(str(method_path) + '_in.png', source)
-        imageio.imwrite(str(method_path) + '_out.png', func(source, **args))
+        imageio.imwrite(str(method_path) + '_in.png', input)
+        imageio.imwrite(str(method_path) + '_out.png', output)
 
         return self
 
@@ -42,6 +41,7 @@ defaults = {
 }
 
 # Alias some image names
+data.blank = lambda: numpy.zeros(geo[2:4])
 data.text_inverted = lambda: util.invert(data.text())
 data.text_bw = lambda: data.bw_text()
 data.text_bw_inverted = lambda: util.invert(data.bw_text())
@@ -62,26 +62,42 @@ for category in categories:
     module = globals()[category['name']]
 
     for subcategory in category['children']:
-        submodule = getattr(module, subcategory['name'])
+        if subcategory['name']:
+            submodule = getattr(module, subcategory['name'])
 
         saver = ImageSaver(
             base_path = Path(__file__, '../images/generated').resolve(),
             base_name = category['name'] + '/' + subcategory['name']
         )
         for method in subcategory['children']:
-            image_name = method.get('image', defaults['image_name'])
-            image_func = getattr(data, image_name)
             geo = method.get('geometry', defaults['geometry'])
             args = method.get('args', {})
-            args['selem'] = elements.get(args.get('selem'))
+            image_name = args.get('image', defaults['image_name'])
+            image_func = getattr(data, image_name)
+            selem = args.get('selem')
+            if selem:
+                args['selem'] = elements.get(selem)
 
-            saver.save(
-                func=getattr(submodule, method['name']),
-                source=image_func()[
+
+            if category['name'] == 'draw':
+                func = getattr(module, method['name'])
+                input = data.blank()
+                output = data.blank()
+                rr, cc = func(**args)
+                output[rr, cc] = 1
+            else:
+                func = getattr(submodule, method['name'])
+                args['image'] = image_func()[
                     geo[0]:(geo[0] + geo[2]),
                     geo[1]:(geo[1] + geo[3]),
-                ],
-                args=args,
+                ]
+                input = args['image']
+                output = func(**args)
+
+            saver.save(
+                method_name=method['name'],
+                input=input,
+                output=output,
             )
 
 # rankSaver.save(

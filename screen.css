@@ -17,6 +17,7 @@ main {
   padding: 2em 4em;
 }
 
+
 header {
   margin-bottom: 2em;
 }
@@ -43,6 +44,10 @@ h1 {
   font-weight: inherit;
 }
 
+h2, h3 {
+  color: lightskyblue;
+}
+
 hr {
   background-color: lightskyblue;
   border: 0;
@@ -58,6 +63,10 @@ section a {
   text-decoration: none;
 }
 
+.description p {
+  margin-bottom: 0;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
@@ -71,6 +80,10 @@ li {
 pre {
   display: inline-block;
   vertical-align: middle;
+}
+
+section {
+  margin-bottom: 4em;
 }
 
 section img {
@@ -93,8 +106,8 @@ section img {
 .highlight .n,
 .highlight .nb { color: rgb(220, 220, 220) } /* Name */
 
-.highlight .n:first-of-type,
-.highlight .nb:first-of-type { color: lightskyblue } /* Name */
+a .highlight .n:first-of-type,
+a .highlight .nb:first-of-type { color: lightskyblue } /* Name */
 
 .highlight .p   { color: gray } /* Punctuation */
 

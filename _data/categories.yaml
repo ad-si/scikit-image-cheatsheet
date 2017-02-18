@@ -1,141 +1,264 @@
+- name: draw
+  description: |
+    output_image = numpy.zeros((90, 160))
+    rows, columns = function(**arguments)
+    output_image[rows, columns] = 1
+  children:
+    - name: ''
+      children:
+      - name: bezier_curve
+        args:
+          r0: 10
+          c0: 50
+          r1: 50
+          c1: 10
+          r2: 80
+          c2: 80
+          weight: 2
+
+      - name: circle
+        args:
+          r: 40
+          c: 40
+          radius: 10
+
+      - name: circle_perimeter
+        args:
+          r: 40
+          c: 40
+          radius: 20
+
+      # - name: circle_perimeter_aa
+      #   args:
+      #     r: 40
+      #     c: 40
+      #     radius: 30
+
+      - name: ellipse
+        args:
+          r: 50
+          c: 90
+          r_radius: 10
+          c_radius: 20
+
+      - name: ellipse_perimeter
+        args:
+          r: 50
+          c: 90
+          r_radius: 20
+          c_radius: 30
+
+      # - name: ellipsoid
+      #   args:
+      #     a: 10
+      #     b: 20
+      #     c: 30
+
+      # - name: ellipsoid_stats
+      #   args:
+      #     a: 40
+      #     b: 40
+      #     c: 40
+
+      - name: line
+        args:
+          r0: 10
+          c0: 20
+          r1: 60
+          c1: 50
+
+      # - name: line_aa
+      #   args:
+      #     r0: 40
+      #     c0: 40
+      #     r1: 40
+      #     c1: 40
+
+      - name: polygon
+        args:
+          r: [10, 20, 80, 10]
+          c: [10, 70, 40, 10]
+
+      - name: polygon_perimeter
+        args:
+          r: [10, 20, 80, 10]
+          c: [10, 70, 40, 10]
+
+      # - name: set_color
+      #   args:
+      #     img
+      #     coords
+      #     color
+
+
 - name: filters
   children:
     - name: rank
       children:
         - name: autolevel
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: autolevel_percentile
           args:
+            image: text
             selem: 'disk(5)'
             p0: 0.2
             p1: 0.8
 
         - name: bottomhat
-          image: text_bw
           args:
+            image: text_bw
             selem: 'disk(5)'
 
         - name: enhance_contrast
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: enhance_contrast_percentile
           args:
+            image: text
             selem: 'disk(5)'
             p0: 0.2
             p1: 0.8
 
         - name: entropy
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: equalize
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: geometric_mean
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: gradient
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: gradient_percentile
           args:
+            image: text
             selem: 'disk(5)'
             p0: 0.2
             p1: 0.8
 
         - name: maximum
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: mean
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: mean_bilateral
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: mean_percentile
           args:
+            image: text
             selem: 'disk(5)'
             p0: 0.2
             p1: 0.8
 
         - name: median
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: minimum
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: modal
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: noise_filter
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: otsu
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: percentile
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: pop
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: pop_bilateral
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: pop_percentile
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: subtract_mean
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: subtract_mean_percentile
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: sum
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: sum_bilateral
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: sum_percentile
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: threshold
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: threshold_percentile
           args:
+            image: text
             selem: 'disk(5)'
 
         - name: tophat
-          image: text_bw_inverted
           args:
+            image: text_bw_inverted
             selem: 'disk(5)'
 
         - name: windowed_histogram
           args:
+            image: text
             selem: 'disk(5)'
