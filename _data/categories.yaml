@@ -97,12 +97,12 @@
       children:
         - name: autolevel
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: autolevel_percentile
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
             p0: 0.2
             p1: 0.8
@@ -114,143 +114,143 @@
 
         - name: enhance_contrast
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: enhance_contrast_percentile
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
             p0: 0.2
             p1: 0.8
 
         - name: entropy
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: equalize
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: geometric_mean
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: gradient
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: gradient_percentile
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
             p0: 0.2
             p1: 0.8
 
         - name: maximum
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: mean
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: mean_bilateral
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: mean_percentile
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
             p0: 0.2
             p1: 0.8
 
         - name: median
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: minimum
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: modal
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: noise_filter
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: otsu
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: percentile
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: pop
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: pop_bilateral
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: pop_percentile
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: subtract_mean
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: subtract_mean_percentile
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: sum
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: sum_bilateral
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: sum_percentile
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: threshold
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: threshold_percentile
           args:
-            image: text
+            image: text_inverted
             selem: 'disk(5)'
 
         - name: tophat
@@ -258,7 +258,49 @@
             image: text_bw_inverted
             selem: 'disk(5)'
 
-        - name: windowed_histogram
+        # - name: windowed_histogram
+        #   args:
+        #     image: text
+        #     selem: 'disk(5)'
+
+- name: exposure
+  children:
+    - name: ''
+      children:
+        - name: adjust_gamma
           args:
-            image: text
-            selem: 'disk(5)'
+            image: text_inverted
+            gamma: 2
+
+        - name: adjust_log
+          args:
+            image: text_inverted
+            gain: 2
+
+        - name: adjust_sigmoid
+          args:
+            image: text_inverted
+
+        # - name: cumulative_distribution
+        #   args:
+        #     image: text_inverted
+
+        - name: equalize_adapthist
+          args:
+            image: text_inverted
+
+        - name: equalize_hist
+          args:
+            image: text_inverted
+
+        # - name: histogram
+        #   args:
+        #     image: text_inverted
+
+        # - name: is_low_contrast
+        #   args:
+        #     image: text_inverted
+
+        - name: rescale_intensity
+          args:
+            image: text_inverted

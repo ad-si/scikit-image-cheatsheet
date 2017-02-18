@@ -62,8 +62,9 @@ for category in categories:
     module = globals()[category['name']]
 
     for subcategory in category['children']:
-        if subcategory['name']:
-            submodule = getattr(module, subcategory['name'])
+        submodule = getattr(module, subcategory['name']) \
+            if subcategory['name'] \
+            else None
 
         saver = ImageSaver(
             base_path = Path(__file__, '../images/generated').resolve(),
@@ -78,15 +79,16 @@ for category in categories:
             if selem:
                 args['selem'] = elements.get(selem)
 
+            func = getattr(submodule, method['name']) \
+                if submodule \
+                else getattr(module, method['name'])
 
             if category['name'] == 'draw':
-                func = getattr(module, method['name'])
                 input = data.blank()
                 output = data.blank()
                 rr, cc = func(**args)
                 output[rr, cc] = 1
             else:
-                func = getattr(submodule, method['name'])
                 args['image'] = image_func()[
                     geo[0]:(geo[0] + geo[2]),
                     geo[1]:(geo[1] + geo[3]),
