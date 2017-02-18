@@ -1,0 +1,81 @@
+---
+---
+
+{% assign indent = '
+    ' %}
+{% assign newline = '
+' %}
+
+<head>
+  <link rel="stylesheet" href="screen.css">
+</head>
+
+<main>
+  <img id="logo" src="images/logo.png" alt="Main logo of the website">
+  <h1>{{site.title}}</h1>
+
+  <p>
+    See all available <a href="http://scikit-image.org">scikit-image</a> methods
+    and their respective output at a glance.
+  </p>
+
+  <p>
+    Click on the code to get to its official documentation.
+  </p>
+
+  <hr>
+
+  <section>
+
+  {% for category in site.data.categories %}
+    <h2><code>{{category.name}}</code></h2>
+
+    {% for subcategory in category.children %}
+      <h3><code>{{subcategory.name}}</code></h3>
+      <ul>
+        {% for method in subcategory.children %}
+          {% assign api_url = 'http://scikit-image.org/docs/dev/api' %}
+          {% assign r_brace = '}' %}
+
+          {% capture method_name %}
+            {{category.name}}.{{subcategory.name}}.{{method.name}}
+          {% endcapture %}
+
+          {% capture method_url %}
+            {{api_url}}/skimage.{{category.name}}.{{subcategory.name}}.html
+            #skimage.{{method_name}}
+          {% endcapture %}
+
+          {% capture args_str %}
+            {{method.args | remove: '"' | remove: '>' | remove: '{' | remove: r_brace}}
+          {% endcapture %}
+
+          {% capture image_arg %}
+            image={{method.image | default: 'text'}},
+          {% endcapture %}
+
+          {% assign full_args_str = args_str | prepend: ' ' | prepend: image_arg %}
+          {% assign full_args_joined = full_args_str | split: ' ' | join: indent %}
+
+          {% capture code %}
+            {{method.name}}({{indent}}{{full_args_joined}},{{newline}})
+          {% endcapture %}
+
+          <li>
+            <a href="{{method_url | strip_newlines | remove: ' '}}">
+              {% highlight python %}{{code | strip}}{% endhighlight %}
+            </a>
+            <img
+              src="images/generated/{{method_name | replace: '.', '/' | strip}}_in.png"
+              alt="Input image">
+            <img
+              src="images/generated/{{method_name | replace: '.', '/' | strip}}_out.png"
+              alt="Output image">
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  {% endfor %}
+
+  </section>
+</main>

@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(180, 180, 180);
+  padding: 0;
+  margin: 0;
+  background-color: rgb(20, 20, 20);
+  font-family: Helvetica, sans-serif;
+}
+
+main {
+  width: 50em;
+  margin: 0 auto;
+  background-color: rgb(30, 30, 30);
+  padding: 2em 4em;
+}
+
+img#logo {
+  display: inline-block;
+  width: 3em;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
+h1 {
+  color: lightskyblue;
+  display: inline-block;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  font-size: 2.5em;
+  vertical-align: middle;
+}
+
+hr {
+  background-color: lightskyblue;
+  border: 0;
+  height: 1px;
+}
+
+a, a:visited {
+  color: rgb(220, 220, 220);
+}
+
+section a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+pre {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+section img {
+  display: inline-block;
+  width: 160px;
+  height: 90px;
+  vertical-align: middle;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.highlight {
+  display: inline-block;
+  width: 15em;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 0.9em;
+}
+.highlight .hll { background-color: #ffffcc }
+
+.highlight .n,
+.highlight .nb { color: rgb(220, 220, 220) } /* Name */
+
+.highlight .n:first-of-type,
+.highlight .nb:first-of-type { color: lightskyblue } /* Name */
+
+.highlight .p   { color: gray } /* Punctuation */
+
+.highlight .o   { color: deeppink } /* Operator */
+
+.highlight .mb, /* Literal.Number.Bin */
+.highlight .mf, /* Literal.Number.Float */
+.highlight .mh, /* Literal.Number.Hex */
+.highlight .mi, /* Literal.Number.Integer */
+.highlight .mo  { color: palegreen } /* Literal.Number.Oct */
+
+.highlight .sa, /* Literal.String.Affix */
+.highlight .sb, /* Literal.String.Backtick */
+.highlight .sc, /* Literal.String.Char */
+.highlight .dl, /* Literal.String.Delimiter */
+.highlight .sd, /* Literal.String.Doc */
+.highlight .s2, /* Literal.String.Double */
+.highlight .se, /* Literal.String.Escape */
+.highlight .sh, /* Literal.String.Heredoc */
+.highlight .si, /* Literal.String.Interpol */
+.highlight .sx, /* Literal.String.Other */
+.highlight .sr, /* Literal.String.Regex */
+.highlight .s1, /* Literal.String.Single */
+.highlight .ss  { color: #f1fa8c } /* Literal.String.Symbol */
