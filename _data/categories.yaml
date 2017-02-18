@@ -439,3 +439,145 @@
         # - name: structure_tensor_eigvals
         #   args:
         #     image: text_inverted
+
+- name: filters
+  children:
+    - name: ''
+      children:
+        # - name: copy_func
+        #   args:
+        #     image: text_inverted
+
+        - name: frangi
+          args:
+            image: text_inverted
+
+        # - name: gabor
+        #   args:
+        #     image: text_inverted
+        #     frequency: 0.5
+
+        # - name: gabor_kernel
+        #   args:
+        #     image: text_inverted
+
+        - name: gaussian
+          args:
+            image: text_inverted
+
+        - name: hessian
+          args:
+            image: text_inverted
+
+        # - name: inverse
+        #   args:
+        #     image: text_inverted
+
+        - name: laplace
+          args:
+            image: text_inverted
+
+        - name: median
+          args:
+            image: text_inverted
+
+        - name: prewitt
+          args:
+            image: text_inverted
+
+        - name: prewitt_h
+          args:
+            image: text_inverted
+
+        - name: prewitt_v
+          args:
+            image: text_inverted
+
+        # - name: rank_order
+        #   args:
+        #     image: text_inverted
+
+        - name: roberts
+          args:
+            image: text_inverted
+
+        - name: roberts_neg_diag
+          args:
+            image: text_inverted
+
+        - name: roberts_pos_diag
+          args:
+            image: text_inverted
+
+        - name: scharr
+          args:
+            image: text_inverted
+
+        - name: scharr_h
+          args:
+            image: text_inverted
+
+        - name: scharr_v
+          args:
+            image: text_inverted
+
+        - name: sobel
+          args:
+            image: text_inverted
+
+        - name: sobel_h
+          args:
+            image: text_inverted
+
+        - name: sobel_v
+          args:
+            image: text_inverted
+
+        # - name: threshold_isodata
+        #   args:
+        #     image: text_inverted
+
+        # - name: threshold_li
+        #   args:
+        #     image: text_inverted
+
+        - name: threshold_local
+          args:
+            image: text_inverted
+            block_size: 5
+
+        # - name: threshold_mean
+        #   args:
+        #     image: text_inverted
+
+        # - name: threshold_minimum
+        #   args:
+        #     image: text_inverted
+
+        - name: threshold_niblack
+          args:
+            image: text_inverted
+
+        # - name: threshold_otsu
+        #   args:
+        #     image: text_inverted
+
+        - name: threshold_sauvola
+          args:
+            image: text_inverted
+
+        # - name: threshold_triangle
+        #   args:
+        #     image: text_inverted
+
+        # - name: threshold_yen
+        #   args:
+        #     image: text_inverted
+
+        # - name: try_all_threshold
+        #   args:
+        #     image: text_inverted
+
+        # - name: wiener
+        #   args:
+        #     image: text_inverted
