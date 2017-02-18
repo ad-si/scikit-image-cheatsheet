@@ -103,13 +103,3 @@ for category in categories:
                 input=input,
                 output=output,
             )
-
-# rankSaver.save(
-#     func=filters.rank.enhance_contrast_percentile,
-#     source=text_image,
-#     args={
-#         'selem': disk5,
-#         'p0': 0.2,
-#         'p1': 0.8,
-#     },
-# )

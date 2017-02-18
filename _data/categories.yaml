@@ -843,3 +843,57 @@
         # - name: star
         #   args:
         #     image: text_inverted
+
+
+- name: restoration
+  children:
+    - name: ''
+      children:
+        - name: denoise_bilateral
+          geometry: [120, 220, 90, 160]
+          args:
+            image: rocket
+
+        - name: denoise_nl_means
+          args:
+            image: text_inverted
+
+        - name: denoise_tv_bregman
+          args:
+            image: text_inverted
+            weight: 0.5
+
+        # - name: denoise_tv_chambolle
+        #   args:
+        #     image: text_inverted
+
+        # - name: denoise_wavelet
+        #   args:
+        #     image: text_inverted
+
+        # - name: estimate_sigma
+        #   args:
+        #     image: text_inverted
+
+        # - name: inpaint_biharmonic
+        #   args:
+        #     image: text_inverted
+
+        # - name: richardson_lucy
+        #   args:
+        #     image: text_inverted
+        #     psf: np.ones((5, 5)) / 25
+
+        # - name: unsupervised_wiener
+        #   args:
+        #     image: text_inverted
+        #     psf: np.ones((5, 5)) / 25
+
+        - name: unwrap_phase
+          args:
+            image: text_inverted
+
+        # - name: wiener
+        #   args:
+        #     image: text_inverted
+        #   psf: np.ones((5, 5)) / 25
