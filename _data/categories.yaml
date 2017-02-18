@@ -90,179 +90,6 @@
       #     coords
       #     color
 
-
-- name: filters
-  children:
-    - name: rank
-      children:
-        - name: autolevel
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: autolevel_percentile
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-            p0: 0.2
-            p1: 0.8
-
-        - name: bottomhat
-          args:
-            image: text_bw
-            selem: 'disk(5)'
-
-        - name: enhance_contrast
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: enhance_contrast_percentile
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-            p0: 0.2
-            p1: 0.8
-
-        - name: entropy
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: equalize
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: geometric_mean
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: gradient
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: gradient_percentile
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-            p0: 0.2
-            p1: 0.8
-
-        - name: maximum
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: mean
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: mean_bilateral
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: mean_percentile
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-            p0: 0.2
-            p1: 0.8
-
-        - name: median
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: minimum
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: modal
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: noise_filter
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: otsu
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: percentile
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: pop
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: pop_bilateral
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: pop_percentile
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: subtract_mean
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: subtract_mean_percentile
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: sum
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: sum_bilateral
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: sum_percentile
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: threshold
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: threshold_percentile
-          args:
-            image: text_inverted
-            selem: 'disk(5)'
-
-        - name: tophat
-          args:
-            image: text_bw_inverted
-            selem: 'disk(5)'
-
-        # - name: windowed_histogram
-        #   args:
-        #     image: text
-        #     selem: 'disk(5)'
-
 - name: exposure
   children:
     - name: ''
@@ -579,5 +406,440 @@
         #     image: text_inverted
 
         # - name: wiener
+        #   args:
+        #     image: text_inverted
+
+    - name: rank
+      children:
+        - name: autolevel
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: autolevel_percentile
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+            p0: 0.2
+            p1: 0.8
+
+        - name: bottomhat
+          args:
+            image: text_bw
+            selem: 'disk(5)'
+
+        - name: enhance_contrast
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: enhance_contrast_percentile
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+            p0: 0.2
+            p1: 0.8
+
+        - name: entropy
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: equalize
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: geometric_mean
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: gradient
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: gradient_percentile
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+            p0: 0.2
+            p1: 0.8
+
+        - name: maximum
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: mean
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: mean_bilateral
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: mean_percentile
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+            p0: 0.2
+            p1: 0.8
+
+        - name: median
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: minimum
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: modal
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: noise_filter
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: otsu
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: percentile
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: pop
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: pop_bilateral
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: pop_percentile
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: subtract_mean
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: subtract_mean_percentile
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: sum
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: sum_bilateral
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: sum_percentile
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: threshold
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: threshold_percentile
+          args:
+            image: text_inverted
+            selem: 'disk(5)'
+
+        - name: tophat
+          args:
+            image: text_bw_inverted
+            selem: 'disk(5)'
+
+        # - name: windowed_histogram
+        #   args:
+        #     image: text
+        #     selem: 'disk(5)'
+
+# - name: future
+#   children:
+#     - name: graph
+#       children:
+#         - name: cut_normalized
+#           args:
+#             labels:
+#             rag:
+#
+#         - name: cut_threshold
+#           args:
+#             labels:
+#
+#         - name: merge_hierarchical
+#
+#         - name: ncut
+#           args:
+#             labels:
+#             rag:
+#
+#         - name: rag_boundary
+#           args:
+#             labels:
+#
+#         - name: rag_mean_color
+#           args:
+#             image:
+#
+#         - name: show_rag
+#           args:
+#             labels:
+#             rag:
+#             image:
+
+# - name: measure
+#   children:
+#     - name: ''
+#       children:
+        # - name: approximate_polygon
+        #   args:
+        #     image: text_inverted
+
+        # - name: block_reduce
+        #   args:
+        #     image: text_inverted
+        #     block_size: [3, 5]
+
+        # - name: compare_mse
+        #   args:
+        #     image: text_inverted
+
+        # - name: compare_nrmse
+        #   args:
+        #     image: text_inverted
+
+        # - name: compare_psnr
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: compare_ssim
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: correct_mesh_orientation
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: find_contours
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: grid_points_in_poly
+        #   args:
+        #     image: text_inverted
+
+        # - name: label
+        #   args:
+        #     input: text_bw_inverted
+
+        # - name: marching_cubes
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: marching_cubes_classic
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: marching_cubes_lewiner
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: mesh_surface_area
+        #   args:
+        #     image: text_inverted
+
+        # - name: moments
+        #   args:
+        #     image: text_bw_inverted
+        #
+        # - name: moments_central
+        #   args:
+        #     image: text_inverted
+
+        # - name: moments_hu
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: moments_normalized
+        #   args:
+        #     image: text_inverted
+
+        # - name: perimeter
+        #   args:
+        #     image: text_inverted
+
+        # - name: points_in_poly
+        #   args:
+        #     image: text_inverted
+
+        # - name: profile_line
+        #   args:
+        #     image: text_inverted
+
+        # - name: ransac
+        #   args:
+        #     image: text_inverted
+
+        # - name: regionprops
+        #   args:
+        #     image: labels
+
+        # - name: subdivide_polygon
+        #   args:
+        #     image: text_inverted
+
+
+- name: morphology
+  children:
+    - name: ''
+      children:
+        # - name: ball
+        #   args:
+        #     radius: 5
+
+        - name: binary_erosion
+          args:
+            image: text_bw_inverted
+
+        - name: binary_dilation
+          args:
+            image: text_bw_inverted
+
+
+        - name: binary_opening
+          args:
+            image: text_bw_inverted
+
+        - name: binary_closing
+          args:
+            image: text_bw_inverted
+
+
+        - name: erosion
+          args:
+            image: text_inverted
+
+        - name: dilation
+          args:
+            image: text_inverted
+
+
+        - name: opening
+          args:
+            image: text_inverted
+
+        - name: closing
+          args:
+            image: text_inverted
+
+
+        - name: black_tophat
+          args:
+            image: text_inverted
+
+        - name: white_tophat
+          args:
+            image: text_inverted
+
+
+        - name: convex_hull_image
+          args:
+            image: text_bw_inverted
+
+        - name: convex_hull_object
+          args:
+            image: text_bw_inverted
+
+        # - name: label
+        #   args:
+        #     image: text_bw_inverted
+
+        - name: medial_axis
+          args:
+            image: text_bw_inverted
+
+        # - name: reconstruction
+        #   args:
+        #     image: text_inverted
+
+        # - name: remove_small_holes
+        #   args:
+        #     image: text_bw_inverted
+
+        # - name: remove_small_objects
+        #   args:
+        #     image: text_inverted
+
+        - name: skeletonize
+          args:
+            image: text_bw_inverted
+
+        # - name: skeletonize_3d
+        #   args:
+        #     image: text_inverted
+
+        - name: thin
+          args:
+            image: text_bw_inverted
+
+        # - name: watershed
+        #   args:
+        #     image: text_inverted
+
+        # - name: cube
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: diamond
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: disk
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: octagon
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: octahedron
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: rectangle
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: square
+        #   args:
+        #     image: text_inverted
+        #
+        # - name: star
         #   args:
         #     image: text_inverted
