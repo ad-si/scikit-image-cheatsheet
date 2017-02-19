@@ -107,10 +107,7 @@
         - name: adjust_sigmoid
           args:
             image: text_inverted
-
         # - name: cumulative_distribution
-        #   args:
-        #     image: text_inverted
 
         - name: equalize_adapthist
           args:
@@ -119,14 +116,8 @@
         - name: equalize_hist
           args:
             image: text_inverted
-
         # - name: histogram
-        #   args:
-        #     image: text_inverted
-
         # - name: is_low_contrast
-        #   args:
-        #     image: text_inverted
 
         - name: rescale_intensity
           args:
@@ -137,16 +128,10 @@
     - name: ''
       children:
         # - name: blob_dog
-        #   args:
-        #     image: text_inverted
-        #
+                #
         # - name: blob_doh
-        #   args:
-        #     image: text_inverted
-        #
+                #
         # - name: blob_log
-        #   args:
-        #     image: text_inverted
 
         - name: canny
           args:
@@ -155,10 +140,7 @@
         - name: corner_fast
           args:
             image: text_inverted
-
         # - name: corner_foerstner
-        #   args:
-        #     image: text_inverted
 
         - name: corner_harris
           args:
@@ -173,52 +155,21 @@
             image: text_inverted
 
         # - name: corner_orientations
-        #   args:
-        #     image: text_inverted
-
         # - name: corner_peaks
-        #   args:
-        #     image: text_inverted
 
         - name: corner_shi_tomasi
           args:
             image: text_inverted
 
         # - name: corner_subpix
-        #   args:
-        #     image: text_inverted
-
         # - name: daisy
-        #   args:
-        #     image: text_inverted
-
         # - name: draw_multiblock_lbp
-        #   args:
-        #     image: text_inverted
-
         # - name: greycomatrix
-        #   args:
-        #     image: text_inverted
-
         # - name: greycoprops
-        #   args:
-        #     image: text_inverted
-
         # - name: hessian_matrix
-        #   args:
-        #     image: text_inverted
-
         # - name: hessian_matrix_det
-        #   args:
-        #     image: text_inverted
-
         # - name: hessian_matrix_eigvals
-        #   args:
-        #     image: text_inverted
-
         # - name: hog
-        #   args:
-        #     image: text_inverted
 
         - name: local_binary_pattern
           args:
@@ -227,13 +178,7 @@
             R: 5
 
         # - name: match_descriptors
-        #   args:
-        #     image: text_inverted
-
         # - name: match_template
-        #   args:
-        #     image: text_inverted
-
         # - name: multiblock_lbp
         #   args:
         #     int_image: text_inverted
@@ -248,32 +193,20 @@
             indices: false
 
         # - name: plot_matches
-        #   args:
-        #     image: text_inverted
-
         # - name: register_translation
-        #   args:
-        #     image: text_inverted
 
         - name: shape_index
           args:
             image: text_inverted
 
         # - name: structure_tensor
-        #   args:
-        #     image: text_inverted
-
         # - name: structure_tensor_eigvals
-        #   args:
-        #     image: text_inverted
 
 - name: filters
   children:
     - name: ''
       children:
         # - name: copy_func
-        #   args:
-        #     image: text_inverted
 
         - name: frangi
           args:
@@ -281,12 +214,9 @@
 
         # - name: gabor
         #   args:
-        #     image: text_inverted
         #     frequency: 0.5
 
         # - name: gabor_kernel
-        #   args:
-        #     image: text_inverted
 
         - name: gaussian
           args:
@@ -297,8 +227,6 @@
             image: text_inverted
 
         # - name: inverse
-        #   args:
-        #     image: text_inverted
 
         - name: laplace
           args:
@@ -321,8 +249,6 @@
             image: text_inverted
 
         # - name: rank_order
-        #   args:
-        #     image: text_inverted
 
         - name: roberts
           args:
@@ -361,12 +287,7 @@
             image: text_inverted
 
         # - name: threshold_isodata
-        #   args:
-        #     image: text_inverted
-
         # - name: threshold_li
-        #   args:
-        #     image: text_inverted
 
         - name: threshold_local
           args:
@@ -374,40 +295,22 @@
             block_size: 5
 
         # - name: threshold_mean
-        #   args:
-        #     image: text_inverted
-
         # - name: threshold_minimum
-        #   args:
-        #     image: text_inverted
 
         - name: threshold_niblack
           args:
             image: text_inverted
 
         # - name: threshold_otsu
-        #   args:
-        #     image: text_inverted
 
         - name: threshold_sauvola
           args:
             image: text_inverted
 
         # - name: threshold_triangle
-        #   args:
-        #     image: text_inverted
-
         # - name: threshold_yen
-        #   args:
-        #     image: text_inverted
-
         # - name: try_all_threshold
-        #   args:
-        #     image: text_inverted
-
         # - name: wiener
-        #   args:
-        #     image: text_inverted
 
     - name: rank
       children:
@@ -618,101 +521,45 @@
 #     - name: ''
 #       children:
         # - name: approximate_polygon
-        #   args:
-        #     image: text_inverted
 
         # - name: block_reduce
         #   args:
-        #     image: text_inverted
         #     block_size: [3, 5]
 
         # - name: compare_mse
-        #   args:
-        #     image: text_inverted
-
         # - name: compare_nrmse
-        #   args:
-        #     image: text_inverted
-
         # - name: compare_psnr
-        #   args:
-        #     image: text_inverted
-        #
         # - name: compare_ssim
-        #   args:
-        #     image: text_inverted
-        #
         # - name: correct_mesh_orientation
-        #   args:
-        #     image: text_inverted
-        #
         # - name: find_contours
-        #   args:
-        #     image: text_inverted
-        #
         # - name: grid_points_in_poly
-        #   args:
-        #     image: text_inverted
 
         # - name: label
         #   args:
         #     input: text_bw_inverted
 
         # - name: marching_cubes
-        #   args:
-        #     image: text_inverted
-        #
         # - name: marching_cubes_classic
-        #   args:
-        #     image: text_inverted
-        #
         # - name: marching_cubes_lewiner
-        #   args:
-        #     image: text_inverted
-        #
         # - name: mesh_surface_area
-        #   args:
-        #     image: text_inverted
 
         # - name: moments
         #   args:
         #     image: text_bw_inverted
-        #
+
         # - name: moments_central
-        #   args:
-        #     image: text_inverted
-
         # - name: moments_hu
-        #   args:
-        #     image: text_inverted
-        #
         # - name: moments_normalized
-        #   args:
-        #     image: text_inverted
-
         # - name: perimeter
-        #   args:
-        #     image: text_inverted
-
         # - name: points_in_poly
-        #   args:
-        #     image: text_inverted
-
         # - name: profile_line
-        #   args:
-        #     image: text_inverted
-
         # - name: ransac
-        #   args:
-        #     image: text_inverted
 
         # - name: regionprops
         #   args:
         #     image: labels
 
         # - name: subdivide_polygon
-        #   args:
-        #     image: text_inverted
 
 
 - name: morphology
@@ -785,64 +632,32 @@
             image: text_bw_inverted
 
         # - name: reconstruction
-        #   args:
-        #     image: text_inverted
 
         # - name: remove_small_holes
         #   args:
         #     image: text_bw_inverted
 
         # - name: remove_small_objects
-        #   args:
-        #     image: text_inverted
 
         - name: skeletonize
           args:
             image: text_bw_inverted
 
         # - name: skeletonize_3d
-        #   args:
-        #     image: text_inverted
 
         - name: thin
           args:
             image: text_bw_inverted
 
         # - name: watershed
-        #   args:
-        #     image: text_inverted
-
         # - name: cube
-        #   args:
-        #     image: text_inverted
-        #
         # - name: diamond
-        #   args:
-        #     image: text_inverted
-        #
         # - name: disk
-        #   args:
-        #     image: text_inverted
-        #
         # - name: octagon
-        #   args:
-        #     image: text_inverted
-        #
         # - name: octahedron
-        #   args:
-        #     image: text_inverted
-        #
         # - name: rectangle
-        #   args:
-        #     image: text_inverted
-        #
         # - name: square
-        #   args:
-        #     image: text_inverted
-        #
         # - name: star
-        #   args:
-        #     image: text_inverted
 
 
 - name: restoration
@@ -864,29 +679,16 @@
             weight: 0.5
 
         # - name: denoise_tv_chambolle
-        #   args:
-        #     image: text_inverted
-
         # - name: denoise_wavelet
-        #   args:
-        #     image: text_inverted
-
         # - name: estimate_sigma
-        #   args:
-        #     image: text_inverted
-
         # - name: inpaint_biharmonic
-        #   args:
-        #     image: text_inverted
 
         # - name: richardson_lucy
         #   args:
-        #     image: text_inverted
         #     psf: np.ones((5, 5)) / 25
 
         # - name: unsupervised_wiener
         #   args:
-        #     image: text_inverted
         #     psf: np.ones((5, 5)) / 25
 
         - name: unwrap_phase
@@ -895,8 +697,7 @@
 
         # - name: wiener
         #   args:
-        #     image: text_inverted
-        #   psf: np.ones((5, 5)) / 25
+        #     psf: np.ones((5, 5)) / 25
 
 
 - name: segmentation
@@ -904,8 +705,6 @@
     - name: ''
       children:
         # - name: active_contour
-        #   args:
-        #     image: text_inverted
 
         # - name: clear_border
         #   args:
@@ -920,12 +719,9 @@
         #     label_img:
 
         # - name: join_segmentations
-        #   args:
-        #     image: text_inverted
 
         # - name: mark_boundaries
         #   args:
-        #     image: text_inverted
         #     label_img:
 
         - name: quickshift
@@ -939,16 +735,12 @@
         #     labels:
 
         # - name: relabel_sequential
-        #   args:
-        #     image: text_inverted
 
         - name: slic
           args:
             image: text_inverted
 
         # - name: watershed
-        #   args:
-        #     image: text_inverted
 
 
 - name: transform
@@ -957,16 +749,10 @@
       children:
         # - name: downscale_local_mean
         #   args:
-        #     image: text_inverted
         #     factors: [2, 3]
 
         # - name: estimate_transform
-        #   args:
-        #     image: text_inverted
-
         # - name: frt2
-        #   args:
-        #     image: text_inverted
 
         # - name: hough_circle
         #   args:
@@ -974,8 +760,6 @@
         #     radius: 5
 
         # - name: hough_circle_peaks
-        #   args:
-        #     image: text_inverted
 
         # - name: hough_ellipse
         #   args:
@@ -990,16 +774,12 @@
         #     img: text_inverted
 
         # - name: ifrt2
-        #   args:
-        #     image: text_inverted
 
         # - name: integral_image
         #   args:
         #     img: text_inverted
 
         # - name: integrate
-        #   args:
-        #     image: text_inverted
 
         # - name: iradon
         #   args:
@@ -1010,28 +790,15 @@
         #     image: phantom
 
         # - name: matrix_transform
-        #   args:
-        #     image: text_inverted
-
         # - name: order_angles_golden_ratio
-        #   args:
-        #     image: text_inverted
-
         # - name: probabilistic_hough_line
-        #   args:
-        #     image: text_inverted
 
         - name: pyramid_expand
           args:
             image: text_inverted
 
         # - name: pyramid_gaussian
-        #   args:
-        #     image: text_inverted
-
         # - name: pyramid_laplacian
-        #   args:
-        #     image: text_inverted
 
         - name: pyramid_reduce
           args:
@@ -1042,16 +809,12 @@
             image: text_inverted
 
         # - name: rescale
-        #   args:
-        #     image: text_inverted
-
         # - name: resize
-        #   args:
-        #     image: text_inverted
 
         - name: rotate
+          geometry: [120, 220, 90, 160]
           args:
-            image: text_inverted
+            image: rocket
             angle: 180
 
         # - name: seam_carve
@@ -1069,9 +832,6 @@
             strength: 5
 
         # - name: warp
-        #   args:
-        #     image: text_inverted
-
         # - name: warp_coords
 
 - name: util
@@ -1108,7 +868,6 @@
 
         # - name: unique_rows
         #   args:
-        #     image: text_inverted
         #     ar: text_bw_inverted
 
         # - name: view_as_blocks
