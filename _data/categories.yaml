@@ -897,3 +897,181 @@
         #   args:
         #     image: text_inverted
         #   psf: np.ones((5, 5)) / 25
+
+
+- name: segmentation
+  children:
+    - name: ''
+      children:
+        # - name: active_contour
+        #   args:
+        #     image: text_inverted
+
+        # - name: clear_border
+        #   args:
+        #     labels:
+
+        - name: felzenszwalb
+          args:
+            image: text_inverted
+
+        # - name: find_boundaries
+        #   args:
+        #     label_img:
+
+        # - name: join_segmentations
+        #   args:
+        #     image: text_inverted
+
+        # - name: mark_boundaries
+        #   args:
+        #     image: text_inverted
+        #     label_img:
+
+        - name: quickshift
+          geometry: [120, 220, 90, 160]
+          args:
+            image: rocket
+
+        # - name: random_walker
+        #   args:
+        #     data:
+        #     labels:
+
+        # - name: relabel_sequential
+        #   args:
+        #     image: text_inverted
+
+        - name: slic
+          args:
+            image: text_inverted
+
+        # - name: watershed
+        #   args:
+        #     image: text_inverted
+
+
+- name: transform
+  children:
+    - name: ''
+      children:
+        # - name: downscale_local_mean
+        #   args:
+        #     image: text_inverted
+        #     factors: [2, 3]
+
+        # - name: estimate_transform
+        #   args:
+        #     image: text_inverted
+
+        # - name: frt2
+        #   args:
+        #     image: text_inverted
+
+        # - name: hough_circle
+        #   args:
+        #     image: coins
+        #     radius: 5
+
+        # - name: hough_circle_peaks
+        #   args:
+        #     image: text_inverted
+
+        # - name: hough_ellipse
+        #   args:
+        #     img: text_inverted
+
+        # - name: hough_line
+        #   args:
+        #     img: text_inverted
+
+        # - name: hough_line_peaks
+        #   args:
+        #     img: text_inverted
+
+        # - name: ifrt2
+        #   args:
+        #     image: text_inverted
+
+        # - name: integral_image
+        #   args:
+        #     img: text_inverted
+
+        # - name: integrate
+        #   args:
+        #     image: text_inverted
+
+        # - name: iradon
+        #   args:
+        #     radon_image: phantom
+
+        # - name: iradon_sart
+        #   args:
+        #     image: phantom
+
+        # - name: matrix_transform
+        #   args:
+        #     image: text_inverted
+
+        # - name: order_angles_golden_ratio
+        #   args:
+        #     image: text_inverted
+
+        # - name: probabilistic_hough_line
+        #   args:
+        #     image: text_inverted
+
+        - name: pyramid_expand
+          args:
+            image: text_inverted
+
+        # - name: pyramid_gaussian
+        #   args:
+        #     image: text_inverted
+
+        # - name: pyramid_laplacian
+        #   args:
+        #     image: text_inverted
+
+        - name: pyramid_reduce
+          args:
+            image: text_inverted
+
+        - name: radon
+          args:
+            image: text_inverted
+
+        # - name: rescale
+        #   args:
+        #     image: text_inverted
+
+        # - name: resize
+        #   args:
+        #     image: text_inverted
+
+        - name: rotate
+          args:
+            image: text_inverted
+            angle: 180
+
+        # - name: seam_carve
+        #   geometry: [120, 220, 90, 160]
+        #   args:
+        #     image: text_bw
+        #     energy_map: text_bw_inverted
+        #     mode: horizontal
+        #     num: 20
+
+        - name: swirl
+          args:
+            image: text_inverted
+            center: [90, 45]
+            strength: 5
+
+        # - name: warp
+        #   args:
+        #     image: text_inverted
+
+        # - name: warp_coords
+        #   args:
+        #     image: text_inverted
