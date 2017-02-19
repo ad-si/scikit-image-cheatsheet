@@ -20,21 +20,30 @@
     </span>
   </header>
 
-  <p>
-    See all <a href="http://scikit-image.org">scikit-image</a> methods
-    for image creation &amp; manipulation and their output at a glance.
-    The cheatsheet was compiled with version
-    <a href="https://github.com/scikit-image/scikit-image/commit/d26cda">
-      d26cda
-  </a>. Methods are sorted alphabetically, except where a semantic order
-  makes more sense (e.g. black_tophat &amp; white_tophat).
-  </p>
+  <section>
+    <p>
+      See all <a href="http://scikit-image.org">scikit-image</a> methods
+      for image creation &amp; manipulation and their output at a glance.
+    </p>
 
-  <p>
-    Click on the code to get to its official documentation.
-  </p>
+    <p>
+      The cheatsheet was compiled with version
+      <a href="https://github.com/scikit-image/scikit-image/commit/d26cda">
+        d26cda
+      </a>.
+      Methods are sorted semantically.
+      Click on the code of each example to get to its official documentation.
+    </p>
+  </section>
 
-  <hr>
+  <section id="social-buttons">
+    <iframe
+      class="github-button"
+      src="https://ghbtns.com/github-btn.html?user=feramhq&repo=scikit-image-cheatsheet&type=star&count=true&size=large"
+      frameborder="0"
+      scrolling="0">
+    </iframe>
+  </section>
 
   {% for category in site.data.categories %}
     <section>
@@ -88,7 +97,6 @@
       </ul>
     {% endfor %}
     </section>
-    <hr>
   {% endfor %}
 
 </main>

@@ -35,6 +35,18 @@ img#logo {
   vertical-align: -50%;
 }
 
+#social-buttons {
+  text-align: center;
+}
+
+.github-button {
+  display: inline-block;
+  width: 160px;
+  height: 30px;
+  margin-bottom: 1em;
+}
+
+
 h1 {
   display: inline-block;
   font-family: 'Helvetica Neue', sans-serif;
@@ -50,12 +62,6 @@ h2, h3 {
 
 p {
   line-height: 1.3;
-}
-
-hr {
-  background-color: lightskyblue;
-  border: 0;
-  height: 1px;
 }
 
 a, a:visited {
@@ -87,7 +93,9 @@ pre {
 }
 
 section {
-  margin-bottom: 4em;
+  border-bottom: 1px solid lightskyblue;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 section img {
