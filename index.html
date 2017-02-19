@@ -64,14 +64,13 @@
           {% endcapture %}
 
           {% capture args_str %}
-            {{method.args | remove: '"' | remove: '>' | remove: '{' | remove: r_brace}}
+            {{method.args | remove: '>' | remove: '{' | remove: r_brace}}
           {% endcapture %}
 
-          {% assign full_args_str = args_str | prepend: ' ' %}
-          {% assign full_args_joined = full_args_str | split: ' ' | join: indent %}
+          {% assign argjoin = args_str | strip | split: ' "' | join: indent %}
 
           {% capture code %}
-            {{method.name}}({{indent}}{{full_args_joined}},{{newline}})
+            {{method.name}}({{indent}}{{argjoin | remove: '"'}},{{newline}})
           {% endcapture %}
 
           <li>
