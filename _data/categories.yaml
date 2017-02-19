@@ -858,6 +858,7 @@
         - name: random_noise
           args:
             image: text_inverted
+            seed: 1
 
         # - name: regular_grid
 
