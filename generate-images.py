@@ -91,11 +91,12 @@ for category in categories:
                 rr, cc = func(**args)
                 output[rr, cc] = 1
             else:
-                args['image'] = image_func()[
-                    geo[0]:(geo[0] + geo[2]),
-                    geo[1]:(geo[1] + geo[3]),
-                ]
-                input = args['image']
+                if args.get('image'):
+                    args['image'] = image_func()[
+                        geo[0]:(geo[0] + geo[2]),
+                        geo[1]:(geo[1] + geo[3]),
+                    ]
+                    input = args['image']
                 output = func(**args)
 
             saver.save(

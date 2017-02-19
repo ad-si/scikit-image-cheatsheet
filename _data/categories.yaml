@@ -1073,5 +1073,43 @@
         #     image: text_inverted
 
         # - name: warp_coords
+
+- name: util
+  children:
+    - name: ''
+      children:
+        # - name: apply_parallel
+        # - name: copy_func
+        # - name: crop
+        # - name: dtype_limits
+        # - name: img_as_bool
+        # - name: img_as_float
+        # - name: img_as_int
+        # - name: img_as_ubyte
+        # - name: img_as_uint
+
+        - name: invert
+          args:
+            image: text_inverted
+
+        # - name: numpy_pad
+        # - name: pad
+
+        - name: random_noise
+          args:
+            image: text_inverted
+
+        # - name: regular_grid
+
+        - name: regular_seeds
+          args:
+            ar_shape: [90, 160]
+            n_points: 100
+
+        # - name: unique_rows
         #   args:
         #     image: text_inverted
+        #     ar: text_bw_inverted
+
+        # - name: view_as_blocks
+        # - name: view_as_windows
