@@ -7,6 +7,12 @@
 ' %}
 
 <head>
+  <meta charset=utf-8>
+  <title>Scikit-Image Cheatsheet</title>
+  <meta
+    name="description"
+    content="All scikit-image methods for image creation &amp; manipulation and their output at a glance.">
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="screen.css">
 </head>
 
@@ -86,12 +92,14 @@
             <a href="{{method_url | strip_newlines | remove: ' ' | replace: '..', '.'}}">
               {% highlight python %}{{code | strip}}{% endhighlight %}
             </a>
-            <img
-              src="images/source/{{method.args.image | default: 'blank'}}.png"
-              alt="Input image">
-            <img
-              src="images/generated/{{method_name | replace: '.', '/' | strip}}_out.png"
-              alt="Output image">
+            <div class="example-images">
+              <img
+                src="images/source/{{method.args.image | default: 'blank'}}.png"
+                alt="Input image">
+              <img
+                src="images/generated/{{method_name | replace: '.', '/' | strip}}_out.png"
+                alt="Output image">
+            </div>
           </li>
         {% endfor %}
       </ul>
